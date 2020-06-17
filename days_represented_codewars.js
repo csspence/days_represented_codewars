@@ -12,6 +12,10 @@ Returns 16 because there are two trips of 8 days, which add up to 16.
 
 */
 
-function daysRepresented(trips){
-// your code here
+const daysRepresented = (trips) => {
+  let sum = 0;
+  for(let i = 0; i < trips.length; i++) {
+      sum += (trips[i][1] - trips[i][0]) + 1;
+  }
+  return sum;
 }
